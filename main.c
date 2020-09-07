@@ -184,27 +184,22 @@ int arraySum(int values[], int size){
 
 int main(void){
     int size;
-    int height = 297;
-    int width = 210;
+    float height, width;
 
     printf("Which size do you want to calculate?\nA");
     scanf("%i",&size);
     printf("\n");
 
-    if(size<4){
-        for(int i=1; i<4-size; i++){
-            width*=2;
-            height*=2;
-        }
+    if(size%2!=0){
+        width = (1/pow(2,(size+1)/2))*1000*pow(2,1.0/4);
+        height = (1/pow(2,(size-1)/2))*1000/pow(2,1.0/4);
     }
-    else if(size>4){
-        for(int i=1; i<size-4; i++){
-            width/=2;
-            height/=2;
-        }
+    else if(size%2==0){
+        width = (1/pow(2,(size/2))*1000*pow(2,1.0/4));
+        height = (1/pow(2,(size/2))*1000/pow(2,1.0/4));
     }
 
-    printf("A paper of size A%i is %i by %i mm",size, width, height);
+    printf("A paper of size A%i is %f by %f mm",size, width, height);
 
 }
 #endif
