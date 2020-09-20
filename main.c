@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <ctype.h>
 
 //Lab task 1 a)
 #if 0
@@ -183,23 +184,42 @@ int arraySum(int values[], int size){
 #if 1
 
 int main(void){
-    int size;
-    float height, width;
+    float A = 0, width = 210, height = 297, temp = 0;      //creates more variables
+    int check=0;
 
-    printf("Which size do you want to calculate?\nA");
-    scanf("%i",&size);
-    printf("\n");
 
-    if(size%2!=0){
-        width = (1/pow(2,(size+1)/2))*1000*pow(2,1.0/4);
-        height = (1/pow(2,(size-1)/2))*1000/pow(2,1.0/4);
-    }
-    else if(size%2==0){
-        width = (1/pow(2,(size/2))*1000*pow(2,1.0/4));
-        height = (1/pow(2,(size/2))*1000/pow(2,1.0/4));
+    printf("What paper size do you want to calculate?\nA");         //prompts the user to input a value
+    check = scanf("%f", &A);            //scans the user input
+
+    if (check !=1 || A-ceil(A) != 0){
+        printf("Error, not an integer.");
+        return 0;
     }
 
-    printf("A paper of size A%i is %f by %f mm",size, width, height);
 
+    if(A < 0 || A > 1000){          //checks if the inputted value is positive and smaller than 1000
+        printf("Error, must input a positive integer smaller than 1000.\n");            //prints the error message
+        return 0;
+    }
+
+    else if(A < 4){         //checks if the user input is smaller than 4
+        for(int i = 4; i > A; i--){         //loops from 4 until it reaches the user input
+            temp = width;           //creates a temporary variable
+            width = height;         //calculates the new width
+            height = temp * 2;          //calculates the new height
+        }
+    }
+
+    else if(A > 4){         //checks if the user input is greater than 4
+        for(int i = 4; i < A; i++){         //loops from 4 until it reaches the user input
+            temp = height;          //creates a temporary variable
+            height = width;         //calculates the new height
+            width = temp / 2;           //calculates the new width
+        }
+    }
+
+    printf("The size of an A%.0f paper is %f x %f mm.\n", A, width, height);          //prints the size
+    return 0;
 }
 #endif
+
