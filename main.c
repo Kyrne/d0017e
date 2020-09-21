@@ -141,7 +141,7 @@ void main(void){
 int prime(int number){
     int check = 1;
 
-    for(int i = 2; i<=number; i++){
+    for(int i = 2; i<number; i++){
         if(number%i==0){
             check=0;
         }
@@ -184,7 +184,7 @@ int arraySum(int values[], int size){
 #if 1
 
 int main(void){
-    float A = 0, width = 210, height = 297, temp = 0;      //creates more variables
+    double A = 0, width = 210, height = 297, temp = 0;      //creates more variables
     int check=0;
 
 
@@ -218,7 +218,7 @@ int main(void){
         }
     }
 
-    printf("The size of an A%.0f paper is %f x %f mm.\n", A, width, height);          //prints the size
+    printf("The size of an A%.0f paper is %g x %g mm.\n", A, width, height);          //prints the size
     return 0;
 }
 #endif
