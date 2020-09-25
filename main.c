@@ -182,16 +182,15 @@ int arraySum(int values[], int size){
 #endif
 
 //Lab task 4
-#if 0
+#if 1
 
 int main(void){
-    float A = 0;
-    double width = 210, height = 297, temp = 0;
+    double A=0, width = 210, height = 297, temp = 0;
     int check=0;
 
 
     printf("What paper size do you want to calculate?\nA");         //prompts the user to input a value
-    check = scanf("%f", &A);            //scans the user input
+    check = scanf("%lf", &A);            //scans the user input
 
     if(A < 0 || A > 1000 || check !=1 || A-ceil(A) != 0){          //checks if the inputted value is positive and smaller than 1000
         printf("Error, must input a positive integer smaller than 1000.\n");            //prints the error message
