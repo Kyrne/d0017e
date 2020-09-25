@@ -70,7 +70,7 @@ void main(){
     int values[10];
     int index;
 
-    for(int i = 0; i<sizeof(values)/sizeof(int); i++){
+    for(int i = 0; i<10; i++){
         values[i]=0;
     }
 
@@ -95,11 +95,11 @@ void main(){
 
     printf("Input 10 numbers:");
 
-    for(int i = 0; i<sizeof(numbers)/sizeof(float); i++){
+    for(int i = 0; i<10; i++){
         scanf("%f",&numbers[i]);
         sum+=numbers[i];
     }
-    printf("The average is:%.3f",sum/10);
+    printf("The average is: %g",sum/10);
 
 
 }
@@ -136,12 +136,13 @@ void main(void){
     int number;
     printf("Input any integer:");
     scanf("%i", &number);
+    prime(number);
 }
 
 int prime(int number){
     int check = 1;
 
-    for(int i = 2; i<=number; i++){
+    for(int i = 2; i<number; i++){
         if(number%i==0){
             check=0;
         }
@@ -181,23 +182,18 @@ int arraySum(int values[], int size){
 #endif
 
 //Lab task 4
-#if 1
+#if 0
 
 int main(void){
-    float A = 0, width = 210, height = 297, temp = 0;      //creates more variables
+    float A = 0;
+    double width = 210, height = 297, temp = 0;
     int check=0;
 
 
     printf("What paper size do you want to calculate?\nA");         //prompts the user to input a value
     check = scanf("%f", &A);            //scans the user input
 
-    if (check !=1 || A-ceil(A) != 0){
-        printf("Error, not an integer.");
-        return 0;
-    }
-
-
-    if(A < 0 || A > 1000){          //checks if the inputted value is positive and smaller than 1000
+    if(A < 0 || A > 1000 || check !=1 || A-ceil(A) != 0){          //checks if the inputted value is positive and smaller than 1000
         printf("Error, must input a positive integer smaller than 1000.\n");            //prints the error message
         return 0;
     }
@@ -218,7 +214,7 @@ int main(void){
         }
     }
 
-    printf("The size of an A%.0f paper is %f x %f mm.\n", A, width, height);          //prints the size
+    printf("The size of an A%.0f paper is %g x %g mm.\n", A, width, height);          //prints the size
     return 0;
 }
 #endif
