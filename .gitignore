@@ -1,2 +1,10 @@
 
 cmake-build-debug/Makefile
+*.xml
+.idea/.name
+*.cmake
+*.bin
+*.exe
+*.txt
+.idea/d0017e.iml
+.idea/workspace.xml
