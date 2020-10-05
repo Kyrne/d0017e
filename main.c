@@ -212,6 +212,7 @@ int main(void){
             width = temp / 2;           //calculates the new width
         }
     }
+    int x;
 
     printf("The size of an A%.0f paper is %g x %g mm.\n", A, width, height);          //prints the size
     return 0;
