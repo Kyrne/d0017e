@@ -42,17 +42,17 @@ void substring(char source[], int start, int count, char result[]){
 }
 #endif
 
-#if 1 //Task 1 b)
+#if 0 //Task 1 b)
 int findString(char[], char[]);
 void getLine(char buffer[]);
 
 void main(){
-    char source[]="", word[]="";
+    char source[]="", word[]="", temp[]="";
     printf("Input a sentence:");
-    getLine(source);
+    getLine(temp);
     printf("\n%s",source);
     printf("\nInput the word you want to find:");
-    getLine(word);
+    getLine(temp);
     printf("\n%s",word);
     findString(source, word);
     printf("\n%s",source);
@@ -85,6 +85,18 @@ int findString(char source[], char word[]){
     }
 
 }
+#endif
 
+#if 1 //Task 2 a)
+void insertEntry();
+
+void main(){
+
+
+}
+
+void insertEntry(){
+
+}
 
 #endif
