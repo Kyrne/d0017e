@@ -1,0 +1,3 @@
+Hello!
+This is a text-file where we switch all lowercase letters to UPPERCASE.
+This was all done using C!
