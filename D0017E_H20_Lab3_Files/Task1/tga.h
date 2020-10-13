@@ -30,7 +30,7 @@ enum TGA_TYPE {
     TGA_RLE_MONOCHROME = 11,        // Run-length encoded black-and-white (grayscale) image
 
     /* Reversed ordering */
-    TGA_FLIP_MASK = 0x30
+    TGA_FLIP_MASK = 0x30            //
 };
 
 /*!
@@ -45,7 +45,7 @@ enum TGA_STATUS {
     TGA_MALLOC_FAILED
 };
 
-#pragma pack(1)
+#pragma pack(1) ///avoid padding
 
 /*!
 	Definition of TGA header structure. For details, see:

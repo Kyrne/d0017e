@@ -13,6 +13,9 @@
 void copy_pixel(PIXEL_RGB24 *dst, const PIXEL_RGB24 *src) {
 
     //Implement this function
+    dst->R = src->R;
+    dst->G = src->G;
+    dst->B = src->B;
 
 }
 
