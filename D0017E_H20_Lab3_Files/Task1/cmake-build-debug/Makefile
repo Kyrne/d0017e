@@ -142,6 +142,33 @@ Task1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Task1.dir\build.make CMakeFiles/Task1.dir/build
 .PHONY : Task1/fast
 
+read_sample.obj: read_sample.c.obj
+
+.PHONY : read_sample.obj
+
+# target to build an object file
+read_sample.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Task1.dir\build.make CMakeFiles/Task1.dir/read_sample.c.obj
+.PHONY : read_sample.c.obj
+
+read_sample.i: read_sample.c.i
+
+.PHONY : read_sample.i
+
+# target to preprocess a source file
+read_sample.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Task1.dir\build.make CMakeFiles/Task1.dir/read_sample.c.i
+.PHONY : read_sample.c.i
+
+read_sample.s: read_sample.c.s
+
+.PHONY : read_sample.s
+
+# target to generate assembly for a file
+read_sample.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Task1.dir\build.make CMakeFiles/Task1.dir/read_sample.c.s
+.PHONY : read_sample.c.s
+
 tga.obj: tga.c.obj
 
 .PHONY : tga.obj
@@ -178,6 +205,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Task1
+	@echo ... read_sample.obj
+	@echo ... read_sample.i
+	@echo ... read_sample.s
 	@echo ... tga.obj
 	@echo ... tga.i
 	@echo ... tga.s

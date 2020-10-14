@@ -64,6 +64,7 @@ int tga_read(const char *file_name, int *width, int *height, PIXEL_RGB24 **pixel
         goto error;
     }
 
+    head.imageDescriptor=0;
     (*width) = head.width;
     (*height) = head.height;
     numPixels = (*width) * (*height);
