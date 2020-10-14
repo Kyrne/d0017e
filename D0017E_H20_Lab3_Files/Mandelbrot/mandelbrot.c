@@ -41,6 +41,7 @@ int main(void) {
 	int x,y, max_it=17, i=0;
 	const int width=1024,height=768;
 	PIXEL_RGB24 image[width*height], color;
+	(image) = (PIXEL_RGB24 *) malloc(sizeof(PIXEL_RGB24) * (width*height));
 
     for (y = 0; y < height; y++) {
         for ( x = 0; x < width; y++) {
